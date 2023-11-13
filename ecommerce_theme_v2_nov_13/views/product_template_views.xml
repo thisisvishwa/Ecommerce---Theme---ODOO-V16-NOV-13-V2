@@ -1,0 +1,59 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Product Detail Page -->
+        <record id="product_template_form_view" model="ir.ui.view">
+            <field name="name">product.template.form.view</field>
+            <field name="model">product.template</field>
+            <field name="arch" type="xml">
+                <form string="Product">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <notebook>
+                            <page string="General Information">
+                                <group>
+                                    <field name="image" widget="image" class="oe_avatar"/>
+                                    <div>
+                                        <h2>Product Details</h2>
+                                        <group>
+                                            <field name="description"/>
+                                            <field name="list_price"/>
+                                        </group>
+                                    </div>
+                                </group>
+                            </page>
+                            <page string="Sales">
+                                <group>
+                                    <field name="sale_ok"/>
+                                    <field name="uom_id"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Product Customization Options -->
+        <record id="product_template_form_view_customization" model="ir.ui.view">
+            <field name="name">product.template.form.view.customization</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product_template_form_view"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Customization">
+                        <group>
+                            <field name="customizable"/>
+                            <field name="customization_options" attrs="{'invisible': [('customizable', '=', False)]}"/>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+    </data>
+</odoo>
+```

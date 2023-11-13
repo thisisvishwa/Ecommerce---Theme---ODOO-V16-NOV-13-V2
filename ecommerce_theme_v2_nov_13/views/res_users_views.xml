@@ -1,0 +1,31 @@
+```xml
+<odoo>
+    <data>
+        <!-- User form view -->
+        <record id="view_res_users_form" model="ir.ui.view">
+            <field name="name">res.users.form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Gaming Rewards">
+                        <field name="gaming_rewards"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- User tree view -->
+        <record id="view_res_users_tree" model="ir.ui.view">
+            <field name="name">res.users.tree</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='login']" position="after">
+                    <field name="gaming_rewards"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
+```

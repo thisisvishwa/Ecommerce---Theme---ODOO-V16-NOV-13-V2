@@ -1,0 +1,41 @@
+/* General Layout */
+body {
+    background-color: #000000; /* Dark background */
+    color: #FFFFFF; /* Neon text */
+    font-family: 'Arial', sans-serif; /* Body text font */
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Mono', monospace; /* Header font */
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* Hover Effects */
+button:hover {
+    background-color: #555555; /* Dark grey */
+    color: #00FF00; /* Neon green */
+}
+
+/* Error Pages */
+.error-page {
+    background-image: url("../img/error_background.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

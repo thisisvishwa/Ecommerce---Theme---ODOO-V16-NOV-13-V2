@@ -1,0 +1,51 @@
+```xml
+<odoo>
+    <data>
+        <!-- Homepage Template -->
+        <template id="homepage_template">
+            <div class="hero-section">
+                <!-- Carousel goes here -->
+            </div>
+            <div class="featured-products">
+                <!-- Featured products grid goes here -->
+            </div>
+            <div class="news-updates">
+                <!-- News & Updates section goes here -->
+            </div>
+        </template>
+
+        <!-- Product Detail Page Template -->
+        <template id="product_detail_template">
+            <div class="product-images">
+                <!-- Product images with zoom functionality goes here -->
+            </div>
+            <div class="product-customization">
+                <!-- Product customization options goes here -->
+            </div>
+            <div class="social-sharing">
+                <!-- Social sharing buttons goes here -->
+            </div>
+        </template>
+
+        <!-- Category Page Template -->
+        <template id="category_page_template">
+            <div class="advanced-filters">
+                <!-- Advanced filters goes here -->
+            </div>
+            <div class="product-comparison">
+                <!-- Product comparison feature goes here -->
+            </div>
+        </template>
+
+        <!-- User Account Area Template -->
+        <template id="user_account_template">
+            <div class="dashboard">
+                <!-- Dashboard for order tracking, wishlist, and profile management goes here -->
+            </div>
+            <div class="gamification-elements">
+                <!-- Gamification elements like rewards or badges for frequent buyers goes here -->
+            </div>
+        </template>
+    </data>
+</odoo>
+```

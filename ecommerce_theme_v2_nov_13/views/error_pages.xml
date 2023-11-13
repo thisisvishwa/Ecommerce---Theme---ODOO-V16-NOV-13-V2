@@ -1,0 +1,27 @@
+```xml
+<odoo>
+    <template id="404">
+        <t t-name="website.404">
+            <div class="container">
+                <div class="text-center">
+                    <h1 class="mt64" style="font-size: 200%;">Oops! Page not found.</h1>
+                    <p>We couldn't find the page you were looking for.</p>
+                    <a href="/" class="btn btn-primary">Back to Home</a>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="500">
+        <t t-name="website.500">
+            <div class="container">
+                <div class="text-center">
+                    <h1 class="mt64" style="font-size: 200%;">Oops! Something went wrong.</h1>
+                    <p>We're sorry, but something went wrong on our end.</p>
+                    <a href="/" class="btn btn-primary">Back to Home</a>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>
+```

@@ -1,0 +1,49 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_category_form_view" model="ir.ui.view">
+        <field name="name">product.category.form</field>
+        <field name="model">product.category</field>
+        <field name="arch" type="xml">
+            <form string="Product Category">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="parent_id"/>
+                    </group>
+                    <group>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_category_tree_view" model="ir.ui.view">
+        <field name="name">product.category.tree</field>
+        <field name="model">product.category</field>
+        <field name="arch" type="xml">
+            <tree string="Product Categories">
+                <field name="name"/>
+                <field name="parent_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_category_action" model="ir.actions.act_window">
+        <field name="name">Product Categories</field>
+        <field name="res_model">product.category</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Product Category
+            </p>
+            <p>
+                Product categories are used to classify your products and manage your product catalog.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_product_category" name="Product Categories" parent="base.menu_sales" sequence="5" action="product_category_action"/>
+</odoo>
+```
